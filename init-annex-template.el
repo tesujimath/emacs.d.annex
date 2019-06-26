@@ -1,4 +1,4 @@
-;;; init-tesujimath-template --- template files
+;;; init-annex-template --- template files
 
 ;;; Commentary:
 ;;; Provides for template files for major modes
@@ -13,5 +13,5 @@
         (if (file-exists-p filename)
             (insert-file filename)))))
 
-(provide 'init-tesujimath-template)
-;;; init-tesujimath-template.el ends here
+(provide 'init-annex-template)
+;;; init-annex-template.el ends here

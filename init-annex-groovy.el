@@ -1,4 +1,4 @@
-;;; init-tesujimath-groovy --- groovy mode
+;;; init-annex-groovy --- groovy mode
 
 ;;; Commentary:
 ;;; Loads and customizes groovy mode
@@ -13,5 +13,5 @@
 ;;             (lambda () (setq tab-width 4)))
 ;;   )
 
-(provide 'init-tesujimath-groovy)
-;;; init-tesujimath-groovy.el ends here
+(provide 'init-annex-groovy)
+;;; init-annex-groovy.el ends here

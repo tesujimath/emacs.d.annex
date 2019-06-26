@@ -1,4 +1,4 @@
-;;; init-tesujimath-web --- web mode tweaks
+;;; init-annex-web --- web mode tweaks
 
 ;;; Commentary:
 
@@ -14,5 +14,5 @@
             (setq web-mode-code-indent-offset 2)
             ))
 
-(provide 'init-tesujimath-web)
-;;; init-tesujimath-web.el ends here
+(provide 'init-annex-web)
+;;; init-annex-web.el ends here

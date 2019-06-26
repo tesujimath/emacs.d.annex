@@ -1,4 +1,4 @@
-;;; init-tesujimath-midnight --- for cleaning up unused buffers
+;;; init-annex-midnight --- for cleaning up unused buffers
 
 ;;; Commentary:
 ;;; Provides for midnight files for major modes, via midnight.* files in ~/etc
@@ -13,5 +13,5 @@
         "\\` \\*shell.*.*\\*\\'"
         ))
 
-(provide 'init-tesujimath-midnight)
-;;; init-tesujimath-midnight.el ends here
+(provide 'init-annex-midnight)
+;;; init-annex-midnight.el ends here

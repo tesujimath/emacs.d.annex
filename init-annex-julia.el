@@ -1,4 +1,4 @@
-;;; init-tesujimath-julia --- support for Julia programming
+;;; init-annex-julia --- support for Julia programming
 
 ;;; Commentary:
 
@@ -10,5 +10,5 @@
 
 (add-hook 'julia-mode-hook 'julia-repl-mode)
 
-(provide 'init-tesujimath-julia)
-;;; init-tesujimath-julia.el ends here
+(provide 'init-annex-julia)
+;;; init-annex-julia.el ends here

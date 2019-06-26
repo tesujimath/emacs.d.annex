@@ -1,4 +1,4 @@
-;;; init-tesujimath-auctex --- load and customize auctex mode
+;;; init-annex-auctex --- load and customize auctex mode
 
 ;;; Commentary:
 
@@ -11,5 +11,5 @@
 (add-hook 'LaTeX-mode-hook '(lambda ()
                               (turn-on-flyspell)))
 
-(provide 'init-tesujimath-auctex)
-;;; init-tesujimath-auctex.el ends here
+(provide 'init-annex-auctex)
+;;; init-annex-auctex.el ends here

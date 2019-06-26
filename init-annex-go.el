@@ -1,4 +1,4 @@
-;;; init-tesujimath-go --- go mode
+;;; init-annex-go --- go mode
 
 ;;; Commentary:
 ;;; Loads and customizes go mode
@@ -15,5 +15,5 @@
   (setq gofmt-command "goimports")
   )
 
-(provide 'init-tesujimath-go)
-;;; init-tesujimath-go.el ends here
+(provide 'init-annex-go)
+;;; init-annex-go.el ends here

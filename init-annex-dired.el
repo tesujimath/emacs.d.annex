@@ -1,4 +1,4 @@
-;;; init-tesujimath-dired --- further dired tweaks
+;;; init-annex-dired --- further dired tweaks
 
 ;;; Commentary:
 
@@ -32,5 +32,5 @@
             (lambda () (define-key dired-mode-map (kbd "C-c v") 'tesujimath/dired-view-file-external)
               (define-key dired-mode-map (kbd "C-c d") 'tesujimath/dired-view-current-dir-external))))
 
-(provide 'init-tesujimath-dired)
-;;; init-tesujimath-dired.el ends here
+(provide 'init-annex-dired)
+;;; init-annex-dired.el ends here

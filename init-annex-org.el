@@ -1,4 +1,4 @@
-;;; init-tesujimath-org --- tweaks for org mode
+;;; init-annex-org --- tweaks for org mode
 
 ;;; Commentary:
 ;;; Additional tweaks over purcell version.
@@ -85,5 +85,5 @@
                                                        ))
              ))
 
-(provide 'init-tesujimath-org)
-;;; init-tesujimath-org.el ends here
+(provide 'init-annex-org)
+;;; init-annex-org.el ends here
