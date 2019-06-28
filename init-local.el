@@ -1,4 +1,4 @@
-;;; init-annex.el --- Load the annex to the configuration
+;;; init-local.el --- Load the annex to the configuration
 ;;; Commentary:
 
 ;; This file loads the extras, which are kept separately.
@@ -57,6 +57,6 @@
 ;; paredit-everywhere-mode is an acquired taste
 (remove-hook 'prog-mode-hook 'paredit-everywhere-mode)
 
-(provide 'init-annex)
+(provide 'init-local)
 
-;;; init-annex.el ends here
+;;; init-local.el ends here
