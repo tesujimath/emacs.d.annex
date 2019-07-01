@@ -7,11 +7,7 @@
 (defun tesujimath/dired-view-external-aux (current-file)
   "View file using external program."
   (cond ((eq system-type 'gnu/linux)
-         ;; alas xdg-open is at the mercy of the current desktop
-         ;; and enlightenment doesn't honour the mimeapps.list file,
-         ;; so use the gnome opener, which needs process-connection type nil
-         (let ((process-connection-type nil)
-               (cmd (concat "gvfs-open \"" current-file "\"")))
+         (let ((cmd (concat "xdg-open \"" current-file "\"")))
            (start-process-shell-command cmd nil cmd)))
         ((eq system-type 'windows-nt)
          (w32-shell-execute "open" current-file))
