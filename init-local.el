@@ -57,6 +57,10 @@
 ;; paredit-everywhere-mode is an acquired taste
 (remove-hook 'prog-mode-hook 'paredit-everywhere-mode)
 
+;; don't want control-Z to suspend frame, it just hangs Emacs
+(global-unset-key (kbd "C-z"))
+
+
 (provide 'init-local)
 
 ;;; init-local.el ends here
