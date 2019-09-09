@@ -18,6 +18,11 @@
 (require 'init-annex-web)
 
 ;; packages not requiring customizaion
+(require-package 'caddyfile-mode)
+(add-hook 'caddyfile-mode-hook
+          (lambda () (setq tab-width 2
+                      indent-tabs-mode nil)))
+
 (require-package 'protobuf-mode)
 ;; puppet mode may be bundled
 (unless (require 'puppet-mode nil t) (progn (require-package 'puppet-mode)
