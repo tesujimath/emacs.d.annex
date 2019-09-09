@@ -13,6 +13,7 @@
 (require 'init-annex-julia)
 (require 'init-annex-midnight)
 (require 'init-annex-org)
+(require 'init-annex-r)
 (require 'init-annex-template)
 (require 'init-annex-web)
 
