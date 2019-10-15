@@ -7,6 +7,7 @@
 
 ;; packages requiring customization
 (require 'init-annex-auctex)
+(require 'init-annex-csharp)
 (require 'init-annex-dired)
 (require 'init-annex-go)
 (require 'init-annex-groovy)
