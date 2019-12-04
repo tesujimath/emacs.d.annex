@@ -14,11 +14,14 @@
 (require 'init-annex-julia)
 (require 'init-annex-midnight)
 (require 'init-annex-org)
+(require 'init-annex-powershell)
 (require 'init-annex-r)
 (require 'init-annex-template)
 (require 'init-annex-web)
 
 ;; packages not requiring customizaion
+(require-package 'actionscript-mode)
+
 (require-package 'caddyfile-mode)
 (add-hook 'caddyfile-mode-hook
           (lambda () (setq tab-width 2
