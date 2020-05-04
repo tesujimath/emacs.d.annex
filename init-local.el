@@ -50,6 +50,7 @@
 (global-set-key (kbd "<f8>") 'compile)
 (global-set-key (kbd "<f9>") 'goto-line)
 (global-set-key (kbd "C-x y") 'rename-buffer)
+(global-set-key (kbd "<pause>") 'ignore)
 
 ;;
 ;; template documents
