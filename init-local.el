@@ -72,6 +72,9 @@
 ;; don't want control-Z to suspend frame, it just hangs Emacs
 (global-unset-key (kbd "C-z"))
 
+;; Windows-only config
+(if (eq system-type 'windows-nt)
+    (require 'wininit-annex))
 
 (provide 'init-local)
 
