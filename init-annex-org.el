@@ -10,11 +10,16 @@
 (require-package 'navi-mode)
 (require 'navi-mode)
 
-;; for word count
-(require-package 'org-wc)
+;; for word count, use my own version of org-wc
+(let ((org-wc-dir (expand-file-name "~/vc/tesujimath/org-wc")))
+  (if (file-directory-p org-wc-dir)
+      (progn
+        (push org-wc-dir load-path)
+        (load "org-wc"))
+    (require-package 'org-wc)))
 
 ;; for export to taskjuggler
-;(require 'ox-taskjuggler)
+;;(require 'ox-taskjuggler)
 
 (setq org-edit-timestamp-down-means-later nil)
 
