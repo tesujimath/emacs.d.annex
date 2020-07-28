@@ -1,7 +1,7 @@
 ;;; wininit-annex --- windows specific config
 
 ;;; Commentary:
-;;; Loads and customizes go mode
+;;; Extras for windows specific config
 
 ;;; Code:
 
@@ -12,7 +12,7 @@
 
 ;; cygwin-mount, not in MELPA, or anywhere else AFAIK
 ;; then, customize Cygwin Mount points
-(load-file "vendor/cygwin-mount.el")
+(load "vendor/cygwin-mount")
 (cygwin-mount-activate)
 
 (provide 'wininit-annex)
