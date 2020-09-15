@@ -19,6 +19,7 @@
 (require 'init-annex-r)
 (require 'init-annex-template)
 (require 'init-annex-web)
+(require 'init-annex-yafolding)
 
 ;; packages not requiring customizaion
 (require-package 'actionscript-mode)
