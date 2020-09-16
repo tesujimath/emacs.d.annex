@@ -7,8 +7,7 @@
 (defun tesujimath/dired-view-external-aux (current-file)
   "View file using external program."
   (cond ((eq system-type 'gnu/linux)
-         (let ((cmd (concat "xdg-open \"" current-file "\"")))
-           (start-process-shell-command cmd nil cmd)))
+         (call-process "mimeo" nil nil nil current-file))
         ((eq system-type 'windows-nt)
          (w32-shell-execute "open" current-file))
         ))
