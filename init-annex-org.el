@@ -5,6 +5,9 @@
 
 ;;; Code:
 
+;; for structure template expansion
+(require 'org-tempo)
+
 ;; for navi mode
 (require-package 'outshine)
 (require-package 'navi-mode)
