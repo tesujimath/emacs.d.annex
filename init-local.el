@@ -68,6 +68,9 @@
 ;; other tweaks
 ;;
 
+;; don't use a pager inside Emacs
+(setenv "PAGER" "cat")
+
 ;; paredit-everywhere-mode is an acquired taste
 (remove-hook 'prog-mode-hook 'paredit-everywhere-mode)
 
