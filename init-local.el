@@ -13,6 +13,7 @@
 (require 'init-annex-go)
 (require 'init-annex-groovy)
 (require 'init-annex-julia)
+(require 'init-annex-markdown)
 (require 'init-annex-midnight)
 (require 'init-annex-nix)
 (require 'init-annex-org)
