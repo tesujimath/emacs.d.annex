@@ -12,6 +12,7 @@
 (require 'init-annex-fsharp)
 (require 'init-annex-go)
 (require 'init-annex-groovy)
+(require 'init-annex-haskell)
 (require 'init-annex-julia)
 (require 'init-annex-markdown)
 (require 'init-annex-midnight)
