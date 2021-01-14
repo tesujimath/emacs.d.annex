@@ -8,6 +8,7 @@
 ;; packages requiring customization
 (require 'init-annex-auctex)
 (require 'init-annex-csharp)
+(require 'init-annex-deadgrep)
 (require 'init-annex-dired)
 (require 'init-annex-fsharp)
 (require 'init-annex-go)
@@ -50,7 +51,8 @@
 ;;
 ;; global keys
 ;;
-(global-set-key (kbd "<f5>") 'auto-fill-mode)
+;;(global-set-key (kbd "<f5>") 'auto-fill-mode)
+(global-set-key (kbd "<f5>") 'deadgrep)
 (global-set-key (kbd "<f8>") 'compile)
 (global-set-key (kbd "<f9>") 'goto-line)
 (global-set-key (kbd "C-x y") 'rename-buffer)
