@@ -57,15 +57,6 @@
    ))
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images)
 
-(setq org-agenda-custom-commands
-      `(
-        ("k" todo "TODO|IN-PROGRESS|WAITING")
-        ("b" todo "BACKLOG")
-        ("t" todo "TODO")
-        ("i" todo "IN-PROGRESS")
-        ("w" todo "WAITING")
-        ))
-
 ;; export timestamps without brackets
 ;; http://stackoverflow.com/questions/23297422/org-mode-timestamp-format-when-exported
 (defun tesujimath/org-export-filter-timestamp-remove-brackets (timestamp backend info)
