@@ -39,7 +39,9 @@
                                             (autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests")
                                             (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
                                             ))
-;(require-package 'vcl-mode)
+;;(require-package 'vcl-mode)
+
+(require-package 'string-inflection)
 
 ;;
 ;; flyspell in some additional modes
@@ -57,6 +59,10 @@
 (global-set-key (kbd "<f9>") 'goto-line)
 (global-set-key (kbd "C-x y") 'rename-buffer)
 (global-set-key (kbd "<pause>") 'ignore)
+
+(global-unset-key (kbd "C-q"))
+(global-set-key (kbd "C-q C-u") 'string-inflection-all-cycle)
+(global-set-key (kbd "C-q C-i") 'quoted-insert)
 
 ;;
 ;; template documents
