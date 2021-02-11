@@ -20,6 +20,7 @@
 (require 'init-annex-midnight)
 (require 'init-annex-nix)
 (require 'init-annex-org)
+(require 'init-annex-org-jira)
 (require 'init-annex-powershell)
 (require 'init-annex-r)
 (require 'init-annex-template)

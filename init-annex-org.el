@@ -103,12 +103,5 @@
                                                        ))
              ))
 
-;; Jira integration with org-jira
-(require-package 'org-jira)
-(let ((org-jira-directory (expand-file-name "~/.org-jira")))
-  (or (file-directory-p org-jira-directory)
-      (make-directory org-jira-directory)
-      ))
-
 (provide 'init-annex-org)
 ;;; init-annex-org.el ends here
