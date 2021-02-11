@@ -24,6 +24,7 @@
 (require 'init-annex-powershell)
 (require 'init-annex-r)
 (require 'init-annex-template)
+(require 'init-annex-fonts)
 (require 'init-annex-web)
 (require 'init-annex-yafolding)
 
