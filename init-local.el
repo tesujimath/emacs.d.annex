@@ -25,6 +25,7 @@
 (require 'init-annex-r)
 (require 'init-annex-template)
 (require 'init-annex-fonts)
+(require 'init-annex-unicode)
 (require 'init-annex-web)
 (require 'init-annex-yafolding)
 
