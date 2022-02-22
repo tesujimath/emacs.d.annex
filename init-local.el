@@ -12,6 +12,7 @@
 (require 'init-annex-dired)
 (require 'init-annex-fsharp)
 (require 'init-annex-go)
+(require 'init-annex-graphql)
 (require 'init-annex-groovy)
 (require 'init-annex-haskell)
 (require 'init-annex-image-dired)
