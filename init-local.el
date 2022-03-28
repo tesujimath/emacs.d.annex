@@ -7,10 +7,9 @@
 
 ;; packages requiring customization
 (require 'init-annex-auctex)
-(require 'init-annex-csharp)
 (require 'init-annex-deadgrep)
+(require 'init-annex-dotnet)
 (require 'init-annex-dired)
-(require 'init-annex-fsharp)
 (require 'init-annex-go)
 (require 'init-annex-graphql)
 (require 'init-annex-groovy)
