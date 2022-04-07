@@ -10,6 +10,7 @@
 (require 'init-annex-deadgrep)
 (require 'init-annex-dotnet)
 (require 'init-annex-dired)
+(require 'init-annex-earthly)
 (require 'init-annex-go)
 (require 'init-annex-graphql)
 (require 'init-annex-groovy)
