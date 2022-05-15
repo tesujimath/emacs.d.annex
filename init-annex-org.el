@@ -50,7 +50,7 @@
    (css . t)
    (js . t)
    (latex . t)
-   (mscgen . t)
+   ;(mscgen . t)
    (python . t)
    (sass . t)
    (sql . t)
