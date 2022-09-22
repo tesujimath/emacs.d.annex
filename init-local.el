@@ -5,6 +5,9 @@
 
 ;;; Code:
 
+;; for epoch view with local mods
+(require 'epoch-view)
+
 ;; packages requiring customization
 (require 'init-annex-asciidoc)
 (require 'init-annex-auctex)
