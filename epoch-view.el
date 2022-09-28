@@ -46,26 +46,36 @@
                  (const :tag "YYYY-MM-DD HH:MM:SS" "%F %T"))
   :group 'epoch-view)
 
+(defun epoch-view-preformat-seconds (text)
+  "Convert TEXT in seconds to float seconds as string."
+  (concat text ".0"))
+
+(defun epoch-view-preformat-milliseconds (text)
+  "Convert TEXT in milliseconds to float seconds as string."
+  (concat (substring text 0 -3) "." (substring text -3)))
+
 (defvar epoch-view-font-lock-keywords
-  '(("\\<[0-9]\\{8,11\\}\\>"
-     (0 (epoch-view-render))))
+  '(("\\<[0-9]\\{8,10\\}\\>"
+     (0 (epoch-view-render 'epoch-view-preformat-seconds)))
+    ("\\<[0-9]\\{11,13\\}\\>"
+     (0 (epoch-view-render 'epoch-view-preformat-milliseconds))))
   "Font-lock keywords of epoch timestamps.")
 
-(defun epoch-view-render ()
-  "Render a epoch match."
+(defun epoch-view-render (preformatter)
+  "Render a epoch match using PREFORMATTER to string as seconds."
   (let ((text (match-string-no-properties 0)))
     `(face font-lock-warning-face
-           display ,(epoch-view--render text))))
+           display ,(epoch-view--render text preformatter))))
 
-(defun epoch-view--render-time (text)
-  "Render the time portion of an epoch match from TEXT."
+(defun epoch-view--render-time (text preformatter)
+  "Render the time portion of an epoch match from TEXT using PREFORMATTER to string as seconds."
   (format-time-string
    epoch-view-time-format
-   (seconds-to-time (car (read-from-string (concat text ".0"))))))
+   (seconds-to-time (car (read-from-string (funcall preformatter text))))))
 
-(defun epoch-view--render (text)
-  "Render a epoch match from a number in TEXT, ending with TEXT."
-  (format "[%s] %s" (epoch-view--render-time text) text))
+(defun epoch-view--render (text preformatter)
+  "Render a epoch match from a number in TEXT using PREFORMATTER to string as seconds."
+  (format "[%s] %s" (epoch-view--render-time text preformatter) text))
 
 (defun epoch-view-turn-on ()
   "Turn on epoch-view-mode."
