@@ -42,8 +42,7 @@
 (add-hook 'org-mode-hook
           '(lambda ()
              (define-key org-mode-map (kbd "C-c C-h") 'hide-sublevels)
-             (turn-on-flyspell)
-             (epoch-view-mode)))
+             (turn-on-flyspell)))
 
 (org-babel-do-load-languages
  'org-babel-load-languages
