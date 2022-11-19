@@ -101,6 +101,9 @@
 (if (eq system-type 'windows-nt)
     (require 'wininit-annex))
 
+;; do this last
+(envrc-global-mode)
+
 (provide 'init-local)
 
 ;;; init-local.el ends here
