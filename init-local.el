@@ -5,6 +5,11 @@
 
 ;;; Code:
 
+;; Install use-package that we require for managing other dependencies
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 ;; for epoch view with local mods
 (require 'epoch-view)
 
@@ -29,6 +34,7 @@
 (require 'init-annex-org-jira)
 (require 'init-annex-powershell)
 (require 'init-annex-r)
+(require 'init-annex-rust)
 (require 'init-annex-template)
 (require 'init-annex-fonts)
 (require 'init-annex-unicode)
