@@ -148,26 +148,23 @@
   :ensure
   :init (exec-path-from-shell-initialize))
 
-(when (executable-find "lldb-mi")
-  (use-package dap-mode
-    :ensure
-    :config
-    (dap-ui-mode)
-    (dap-ui-controls-mode 1)
-
-    (require 'dap-lldb)
+(use-package dap-mode
+  :ensure
+  :config
+  (dap-ui-mode)
+  (dap-ui-controls-mode 1)
+  (when (executable-find "gdb")
     (require 'dap-gdb-lldb)
-    ;; installs .extension/vscode
-    (dap-gdb-lldb-setup)
+    (dap-gdb-lldb-setup) ; installs .extension/vscode
     (dap-register-debug-template
-     "Rust::LLDB Run Configuration"
-     (list :type "lldb"
+     "Rust::GDB Run Configuration"
+     (list :type "gdb"
            :request "launch"
-           :name "LLDB::Run"
-           :gdbpath "rust-lldb"
-           ;; uncomment if lldb-mi is not in PATH
-           ;; :lldbmipath "path/to/lldb-mi"
-           ))))
+           :name "GDB::Run"
+           :gdbpath "rust-gdb"
+           ))
+    )
+  )
 
 (provide 'init-annex-rust)
 ;;; init-annex-rust.el ends here
