@@ -164,6 +164,10 @@
            :gdbpath "rust-gdb"
            ))
     )
+
+  ;; en-route to getting the Debug button to work, not yet
+  (require 'dap-cpptools)
+  (dap-cpptools-setup)
   )
 
 (provide 'init-annex-rust)
