@@ -62,7 +62,19 @@
   (lsp-rust-analyzer-display-parameter-hints nil)
   (lsp-rust-analyzer-display-reborrow-hints nil)
   :config
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  ;; from https://github.com/emacs-lsp/lsp-mode/issues/1532
+  (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
+  :hook (lsp-mode . (lambda ()
+                      (let ((lsp-keymap-prefix "C-c l"))
+                        (lsp-enable-which-key-integration))))
+  ;;:init
+  ;; (setq lsp-keep-workspace-alive nil
+  ;;       lsp-signature-doc-lines 5
+  ;;       lsp-idle-delay 0.5
+  ;;       lsp-prefer-capf t
+  ;;       lsp-client-packages nil)
+  )
 
 (use-package lsp-ui
   :ensure
