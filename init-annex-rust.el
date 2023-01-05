@@ -179,32 +179,6 @@
            :gdbpath "rust-gdb"
            ))
     )
-
-  ;; en-route to getting the Debug button to work, not yet
-  (require 'dap-cpptools)
-
-  (with-eval-after-load 'dap-cpptools
-    ;; Add a template specific for debugging Rust programs.
-    ;; It is used for new projects, where I can M-x dap-edit-debug-template
-    (dap-register-debug-template
-     "Rust::CppTools Run Configuration"
-     (list :type "cppdbg"
-           :request "launch"
-           :name "Rust::Run"
-           :MIMode "gdb"
-           :miDebuggerPath "rust-gdb"
-           :environment []
-           :program "${workspaceFolder}/target/debug/euler"
-           :cwd "${workspaceFolder}"
-           :console "external"
-           :dap-compilation "cargo build"
-           :dap-compilation-dir "${workspaceFolder}"))
-
-    ;; TODO hook in Nix package to dap-cpptools-debug-path
-    ;; such that (concat dap-cpptools-debug-path "/extension/debugAdapters/bin/OpenDebugAD7")
-    ;; exists
-    ;; for now manually symlinked into ~/.emacs.d/.extension/vscode/cpptools
-    )
   )
 
 (provide 'init-annex-rust)
