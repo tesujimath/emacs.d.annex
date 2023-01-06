@@ -8,6 +8,8 @@
 ;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ;; rustic = basic rust-mode + additions
 
+(use-package inheritenv)
+
 (use-package rustic
   :ensure
   :bind (:map rustic-mode-map
@@ -26,6 +28,8 @@
               ("C-c d" . eldoc-doc-buffer)
               )
   :config
+  ;; see https://github.com/brotzeit/rustic/issues/420
+  (inheritenv-add-advice #'rustic-compilation)
   ;; uncomment for less flashiness
   ;; (setq lsp-eldoc-hook nil)
   ;; (setq lsp-enable-symbol-highlighting nil)
