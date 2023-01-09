@@ -168,18 +168,15 @@
   :config
   (dap-ui-mode)
   (dap-ui-controls-mode 1)
-  (when (executable-find "gdb")
-    (require 'dap-gdb-lldb)
-    (dap-gdb-lldb-setup) ; installs .extension/vscode
-    (dap-register-debug-template
-     "Rust::GDB Run Configuration"
-     (list :type "gdb"
-           :request "launch"
-           :name "GDB::Run"
-           :gdbpath "rust-gdb"
-           ))
-    )
-  )
+  (require 'dap-gdb-lldb)
+  (dap-gdb-lldb-setup) ; installs .extension/vscode
+  (dap-register-debug-template
+   "Rust::GDB Run Configuration"
+   (list :type "gdb"
+         :request "launch"
+         :name "GDB::Run"
+         :gdbpath "rust-gdb"
+         )))
 
 (provide 'init-annex-rust)
 ;;; init-annex-rust.el ends here
