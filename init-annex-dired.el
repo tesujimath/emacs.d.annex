@@ -7,7 +7,7 @@
 (defun tesujimath/dired-view-external-aux (current-file)
   "View file using external program."
   (cond ((eq system-type 'gnu/linux)
-         (call-process "mimeo" nil nil nil current-file))
+         (call-process "handlr" nil nil nil "open" current-file))
         ((eq system-type 'windows-nt)
          (w32-shell-execute "open" current-file))
         ))
