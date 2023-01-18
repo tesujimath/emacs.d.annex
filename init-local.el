@@ -5,6 +5,16 @@
 
 ;;; Code:
 
+;; Install quelpa and quelpa-use-package, for managing local packages
+(unless (package-installed-p 'quelpa)
+  (package-refresh-contents)
+  (package-install 'quelpa))
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
 ;; Install use-package that we require for managing other dependencies
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)

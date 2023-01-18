@@ -9,7 +9,7 @@
 ;; rustic = basic rust-mode + additions
 
 (use-package rustic
-  :ensure
+  :quelpa (rustic :fetcher github :repo "tesujimath/rustic")
   :bind (:map rustic-mode-map
               ("M-j" . lsp-ui-imenu)
               ("M-?" . lsp-find-references)
