@@ -181,5 +181,15 @@
          :gdbpath "rust-gdb"
          )))
 
+;; reuse rustic buffers even if in another frame
+(dolist (buffer-name
+         '("\\*rustic-compilation\\*"
+           "\\*cargo-run\\*"
+           ))
+  (add-to-list
+   'display-buffer-alist
+   (cons buffer-name '(display-buffer-reuse-window
+                       . ((reusable-frames . t))))))
+
 (provide 'init-annex-rust)
 ;;; init-annex-rust.el ends here
