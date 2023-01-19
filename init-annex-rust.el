@@ -184,7 +184,12 @@
 ;; reuse rustic buffers even if in another frame
 (dolist (buffer-name
          '("\\*rustic-compilation\\*"
+           "\\*cargo-clippy\\*"
            "\\*cargo-run\\*"
+           "\\*cargo-test\\*"
+           "\\*lsp-help\\*"
+           "\\*Flycheck errors*"
+           ".*\\.rs$"
            ))
   (add-to-list
    'display-buffer-alist
