@@ -113,6 +113,10 @@
 ;; don't want control-Z to suspend frame, it just hangs Emacs
 (global-unset-key (kbd "C-z"))
 
+;; accidentally hitting <insert> is really annoying, so make it M-<insert>
+(global-unset-key (kbd "<insert>"))
+(global-set-key (kbd "M-<insert>") 'overwrite-mode)
+
 ;; Windows-only config
 (if (eq system-type 'windows-nt)
     (require 'wininit-annex))
