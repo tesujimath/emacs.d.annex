@@ -24,6 +24,7 @@
               ("C-c C-c h" . lsp-ui-doc-glance)
               ;; sjg additions
               ("C-c d" . eldoc-doc-buffer)
+              ("C-c t" . lsp-rust-analyzer-inlay-hints-mode)
               )
   :config
   ;; uncomment for less flashiness
