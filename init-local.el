@@ -112,6 +112,7 @@
 
 ;; don't want control-Z to suspend frame, it just hangs Emacs
 (global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
 
 ;; accidentally hitting <insert> is really annoying, so make it M-<insert>
 (global-unset-key (kbd "<insert>"))
