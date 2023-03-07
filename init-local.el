@@ -37,6 +37,7 @@
 (require 'init-annex-haskell)
 (require 'init-annex-image-dired)
 (require 'init-annex-julia)
+(require 'init-annex-just)
 (require 'init-annex-markdown)
 (require 'init-annex-midnight)
 (require 'init-annex-nix)
