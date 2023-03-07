@@ -25,6 +25,7 @@
               ;; sjg additions
               ("C-c d" . eldoc-doc-buffer)
               ("C-c t" . lsp-rust-analyzer-inlay-hints-mode)
+              ("C-c C-c C-a" . rustic-cargo-add)
               )
   :config
   ;; uncomment for less flashiness
@@ -45,6 +46,8 @@
   (add-hook 'before-save-hook 'lsp-format-buffer nil t)
   ;; sjg additions
   (display-fill-column-indicator-mode -1)
+  ;; company mode auto completions are really annoying
+  (setq company-idle-delay 5)
   )
 
 ;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
