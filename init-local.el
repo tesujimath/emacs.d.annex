@@ -30,6 +30,7 @@
 (require 'init-annex-dotnet)
 (require 'init-annex-dired)
 (require 'init-annex-earthly)
+(require 'init-annex-frames-only-mode)
 (require 'init-annex-git)
 (require 'init-annex-go)
 (require 'init-annex-graphql)
@@ -123,7 +124,8 @@
 (if (eq system-type 'windows-nt)
     (require 'wininit-annex))
 
-;; do this last
+;; do these last
+(frames-only-mode 1)
 (envrc-global-mode)
 
 (provide 'init-local)

@@ -20,7 +20,7 @@
               ("C-c C-c Q" . lsp-workspace-shutdown)
               ("C-c C-c s" . lsp-rust-analyzer-status)
               ("C-c C-c e" . lsp-rust-analyzer-expand-macro)
-              ("C-c C-c d" . dap-hydra)
+              ("C-c C-c C-d" . dap-hydra)
               ("C-c C-c h" . lsp-ui-doc-glance)
               ;; sjg additions
               ("C-c d" . eldoc-doc-buffer)
@@ -186,19 +186,20 @@
          )))
 
 ;; reuse rustic buffers even if in another frame
-(dolist (buffer-name
-         '("\\*rustic-compilation\\*"
-           "\\*cargo-clippy\\*"
-           "\\*cargo-run\\*"
-           "\\*cargo-test\\*"
-           "\\*lsp-help\\*"
-           "\\*Flycheck errors*"
-           ".*\\.rs$"
-           ))
-  (add-to-list
-   'display-buffer-alist
-   (cons buffer-name '(display-buffer-reuse-window
-                       . ((reusable-frames . t))))))
+;; disabled while playing with frames-only-mode
+;; (dolist (buffer-name
+;;          '("\\*rustic-compilation\\*"
+;;            "\\*cargo-clippy\\*"
+;;            "\\*cargo-run\\*"
+;;            "\\*cargo-test\\*"
+;;            "\\*lsp-help\\*"
+;;            "\\*Flycheck errors*"
+;;            ".*\\.rs$"
+;;            ))
+;;   (add-to-list
+;;    'display-buffer-alist
+;;    (cons buffer-name '(display-buffer-reuse-window
+;;                        . ((reusable-frames . t))))))
 
 (provide 'init-annex-rust)
 ;;; init-annex-rust.el ends here
