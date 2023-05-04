@@ -158,12 +158,6 @@
 
 
 ;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-;; for Cargo.toml and other config files
-
-(use-package toml-mode :ensure)
-
-
-;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 ;; setting up debugging support with dap-mode
 
 (use-package exec-path-from-shell
