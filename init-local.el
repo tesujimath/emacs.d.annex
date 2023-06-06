@@ -26,6 +26,7 @@
 ;; packages requiring customization
 (require 'init-annex-asciidoc)
 (require 'init-annex-auctex)
+(require 'init-annex-beancount)
 (require 'init-annex-deadgrep)
 (require 'init-annex-dotnet)
 (require 'init-annex-dired)
