@@ -195,5 +195,14 @@
 ;;    (cons buffer-name '(display-buffer-reuse-window
 ;;                        . ((reusable-frames . t))))))
 
+;; ;; customize eldoc to work a bit better, work-in-progress, aargghh!
+;; (setq eldoc-echo-area-prefer-doc-buffer t)
+;; ;;(setq display-buffer-alist nil)
+;; (add-to-list 'display-buffer-alist
+;;              '("\\*eldoc\\*"
+;;                (display-buffer-reuse-window display-buffer-pop-up-frame)
+;;                (inhibit-switch-frame . t)
+;;                ))
+
 (provide 'init-annex-rust)
 ;;; init-annex-rust.el ends here
