@@ -27,10 +27,16 @@
 (setq org-edit-timestamp-down-means-later nil)
 
 ;; for org capture
-(setq org-directory "~/notes")
-(setq org-default-notes-file (concat org-directory "/kanban.org"))
+(setq org-directory "~/vc/sjg/roam")
+(setq org-default-notes-file (concat (file-name-as-directory org-directory) "capture.org"))
 (setq org-capture-templates
       '(
+        ;; https://github.com/sprig/org-capture-extension
+        ("L" "Link" entry (file+headline "" "Links")
+         "* %a\n%?")
+        ("p" "Link" entry (file+headline "" "Links")
+         "* %a\n%i\n%?")
+
         ("t" "Todo" entry (file+headline "" "Tasks")
          "* TODO %?\n  %i\n  %a")
         ("!" "Ideas" entry (file+headline "" "Ideas")
