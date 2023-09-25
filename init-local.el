@@ -15,6 +15,11 @@
    :url "https://github.com/quelpa/quelpa-use-package.git"))
 (require 'quelpa-use-package)
 
+;; basic preferences
+(setq-default
+ mouse-yank-at-point nil
+ )
+
 ;; Install use-package that we require for managing other dependencies
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
