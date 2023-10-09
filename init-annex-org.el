@@ -5,6 +5,18 @@
 
 ;;; Code:
 
+;; BACKLOG(b!) TODO(t!) IN-PROGRESS(i!) WAITING(w@/!) | DONE(d!) CANCELLED(c@)
+(setq org-todo-keywords
+      (quote ((sequence "BACKLOG(b!)" "TODO(t)" "IN-PROGRESS(i!)" "|" "DONE(d!/!)" "CANCELLED(c@)")
+              (sequence "IN-PROGRESS(i!)" "WAITING(w@/!)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")
+              (sequence "WAITING(w@/!)" "IN-PROGRESS(i!)" "|" "CANCELLED(c@/!)")))
+      org-todo-repeat-to-state "TODO")
+
+(setq org-todo-keyword-faces
+      (quote (("TODO" :inherit warning)
+              ("IN-PROGRESS" :inherit font-lock-string-face))))
+
+
 ;; for structure template expansion
 (require 'org-tempo)
 
