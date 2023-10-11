@@ -39,15 +39,15 @@
 (setq org-edit-timestamp-down-means-later nil)
 
 ;; for org capture
-(setq org-directory "~/vc/sjg/roam")
-(setq org-default-notes-file (concat (file-name-as-directory org-directory) "capture.org"))
+(setq org-directory (expand-file-name "~/mobile/notes"))
+(setq org-default-notes-file (concat (file-name-as-directory org-directory) "inbox.org"))
 (setq org-capture-templates
       '(
         ;; https://github.com/sprig/org-capture-extension
-        ("L" "Link" entry (file+headline "" "Links")
-         "* %a\n%?")
-        ("p" "Link" entry (file+headline "" "Links")
-         "* %a\n%i\n%?")
+        ("L" "Link" entry (file+headline "resources.org" "Unclassified")
+         "** TODO %:description\n%:link\n%?")
+        ("p" "Link" entry (file+headline "resources.org" "Unclassified")
+         "** TODO %:description\n%:link\n\n%i\n%?")
 
         ("t" "Todo" entry (file+headline "" "Tasks")
          "* TODO %?\n  %i\n  %a")
@@ -56,6 +56,13 @@
         ("j" "Journal" entry (file+headline  "Journal")
          "* %?\nEntered on %U\n  %i\n  %a")
         ))
+
+;; for org-protocol
+;; https://orgmode.org/worg/org-contrib/org-protocol.html
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+(require 'org-protocol)
 
 (add-hook 'org-mode-hook
           '(lambda ()
