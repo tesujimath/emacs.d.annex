@@ -78,6 +78,10 @@
 
 (require-package 'string-inflection)
 
+;; .bu Butane files for Fedora CoreOS are YAML
+;; and so are Terraform templates of such
+(add-auto-mode 'yaml-mode "\\.bu\\(.tftpl\\)?\\'")
+
 ;;
 ;; flyspell in some additional modes
 ;;
