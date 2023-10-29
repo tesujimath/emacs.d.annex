@@ -82,6 +82,9 @@
 ;; and so are Terraform templates of such
 (add-auto-mode 'yaml-mode "\\.bu\\(.tftpl\\)?\\'")
 
+;; trailing whitespace, ugh!
+(add-hook 'write-file-hooks 'delete-trailing-whitespace)
+
 ;;
 ;; flyspell in some additional modes
 ;;
