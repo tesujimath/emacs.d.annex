@@ -82,6 +82,10 @@
 ;; and so are Terraform templates of such
 (add-auto-mode 'yaml-mode "\\.bu\\(.tftpl\\)?\\'")
 
+;; for systemd units
+(require-package 'systemd)
+(add-auto-mode 'systemd-mode "\\.container\\(.tftpl\\)?\\'")
+
 ;; trailing whitespace, ugh!
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
 
