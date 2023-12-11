@@ -66,7 +66,9 @@
 (require-package 'caddyfile-mode)
 (add-hook 'caddyfile-mode-hook
           (lambda () (setq tab-width 2
-                      indent-tabs-mode nil)))
+                           indent-tabs-mode nil)))
+
+(require-package 'nushell-mode)
 
 (require-package 'protobuf-mode)
 ;; puppet mode may be bundled
