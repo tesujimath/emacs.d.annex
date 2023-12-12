@@ -49,6 +49,7 @@
 (require 'init-annex-markdown)
 (require 'init-annex-midnight)
 (require 'init-annex-nix)
+(require 'init-annex-nushell)
 (require 'init-annex-org)
 (require 'init-annex-org-jira)
 (require 'init-annex-powershell)
@@ -67,8 +68,6 @@
 (add-hook 'caddyfile-mode-hook
           (lambda () (setq tab-width 2
                            indent-tabs-mode nil)))
-
-(require-package 'nushell-mode)
 
 (require-package 'protobuf-mode)
 ;; puppet mode may be bundled
