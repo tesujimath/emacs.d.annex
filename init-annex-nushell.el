@@ -31,7 +31,7 @@
        "clean nushell right prompt from current buffer"
        (save-excursion
          (beginning-of-buffer)
-         (while (re-search-forward " *[0-9]\\{1,2\\}/[0-9]\\{1,2\\}/[0-9]\\{2,4\\} [0-9]\\{2\\}:[0-9]\\{2\\}:[0-9]\\{2\\} [AP]M$" nil t)
+         (while (re-search-forward " *\\([0-9]+ \\)?[0-9]\\{1,2\\}/[0-9]\\{1,2\\}/[0-9]\\{2,4\\} [0-9]\\{2\\}:[0-9]\\{2\\}:[0-9]\\{2\\} [AP]M$" nil t)
            (replace-match ""))
          ))
 
