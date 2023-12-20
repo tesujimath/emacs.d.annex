@@ -6,9 +6,14 @@
 
 (require-package 'nushell-mode)
 
-(defun tesujimath/clean-buffer-zellij () (interactive)
-       "clean zellij pane markup from current buffer"
+(defun tesujimath/clean-buffer () (interactive)
+       "clean nushell and zellij markup from current buffer"
        (save-excursion
+         ;; indent any nushell tables by a couple of spaces to protect them from zellij frame removal
+         (beginning-of-buffer)
+         (while (re-search-forward "^│\\([╭│├╰]\\)" nil t)
+           (replace-match "│  \\1"))
+
          ;; kill the blank lines
          (beginning-of-buffer)
          (while (re-search-forward "^│\\s *│$" nil t)
@@ -19,27 +24,19 @@
          (while (re-search-forward "^│\\(.*[^ ]\\) *│$" nil t)
            (replace-match "\\1"))
 
-         ;; finally kill any stray bars at the beginning of a line
+         ;; kill any stray bars at the beginning of a line
          ;; which sometimes arise because the line end is truncated
          ;; (may be a bug in alacritty or zellij)
+         ;; but this destroys nushell tables
          (beginning-of-buffer)
          (while (re-search-forward "^│" nil t)
            (replace-match ""))
-         ))
 
-(defun tesujimath/clean-buffer-nushell () (interactive)
-       "clean nushell right prompt from current buffer"
-       (save-excursion
+         ;; remove nushell right prompt
          (beginning-of-buffer)
          (while (re-search-forward " *\\([0-9]+ \\)?[0-9]\\{1,2\\}/[0-9]\\{1,2\\}/[0-9]\\{2,4\\} [0-9]\\{2\\}:[0-9]\\{2\\}:[0-9]\\{2\\} [AP]M$" nil t)
            (replace-match ""))
          ))
-
-(defun tesujimath/clean-buffer () (interactive)
-       "clean nushell and zellij markup from current buffer"
-       (tesujimath/clean-buffer-zellij)
-       (tesujimath/clean-buffer-nushell)
-       )
 
 (provide 'init-annex-nushell)
 ;;; init-annex-nushell.el ends here
