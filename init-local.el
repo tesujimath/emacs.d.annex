@@ -56,6 +56,7 @@
 (require 'init-annex-r)
 (require 'init-annex-rust)
 (require 'init-annex-template)
+(require 'init-annex-term-title)
 (require 'init-annex-fonts)
 (require 'init-annex-unicode)
 (require 'init-annex-web)
