@@ -126,6 +126,11 @@
 ;; other tweaks
 ;;
 
+;; for use inside Alacritty on WSL
+(use-package clipetty
+  :ensure t
+  :hook (after-init . global-clipetty-mode))
+
 ;; don't use a pager inside Emacs
 (setenv "PAGER" "cat")
 
