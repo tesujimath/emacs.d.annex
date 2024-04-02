@@ -77,6 +77,8 @@
                            indent-tabs-mode nil)))
 
 (require-package 'protobuf-mode)
+(add-auto-mode 'protobuf-mode "\\.txtpb\\'")
+
 ;; puppet mode may be bundled
 (unless (require 'puppet-mode nil t) (progn (require-package 'puppet-mode)
                                             (autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests")
