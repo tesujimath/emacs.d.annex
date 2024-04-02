@@ -100,7 +100,7 @@
 ;;
 ;; flyspell in some additional modes
 ;;
-(after-load 'markdown-mode
+(with-eval-after-load 'markdown-mode
   (add-hook 'markdown-mode-hook 'turn-on-flyspell))
 
 

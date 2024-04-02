@@ -7,7 +7,7 @@
 (require-package 'deadgrep)
 
 ;; TODO this should be switchable
-;; (after-load 'deadgrep
+;; (with-eval-after-load 'deadgrep
 ;;   (defun deadgrep--include-args (rg-args)
 ;;     (push "--hidden" rg-args) ;; consider hidden folders/files
 ;;     (push "--follow" rg-args) ;; follow symlink

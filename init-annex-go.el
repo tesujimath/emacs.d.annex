@@ -7,7 +7,7 @@
 
 (require-package 'go-mode)
 
-(after-load 'go-mode
+(with-eval-after-load 'go-mode
   (add-hook 'go-mode-hook
             (lambda () (setq tab-width 4)))
   (add-hook 'before-save-hook 'gofmt-before-save)

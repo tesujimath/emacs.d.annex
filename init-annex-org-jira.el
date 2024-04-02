@@ -11,7 +11,7 @@
   (if (file-directory-p local-org-jira-dir)
       (push local-org-jira-dir load-path)))
 
-(after-load 'org-jira-mode
+(with-eval-after-load 'org-jira-mode
   (or (file-directory-p org-jira-working-dir)
       (make-directory org-jira-working-dir))
   )

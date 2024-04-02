@@ -9,7 +9,7 @@
 
 ;; there may be some further tweaks required here
 
-;; (after-load 'frames-only-mode
+;; (with-eval-after-load 'frames-only-mode
 ;;   ;;(setq ido-default-buffer-method 'selected-window)
 ;;   )
 
