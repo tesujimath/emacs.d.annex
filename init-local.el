@@ -59,7 +59,7 @@
 (require 'init-annex-org)
 (require 'init-annex-org-jira)
 (require 'init-annex-powershell)
-(require 'init-annex-r)
+;; seems to be broken: (require 'init-annex-r)
 (require 'init-annex-rust)
 (require 'init-annex-template)
 (require 'init-annex-term-title)
