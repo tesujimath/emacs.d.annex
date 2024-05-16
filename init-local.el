@@ -86,6 +86,8 @@
                                             ))
 ;;(require-package 'vcl-mode)
 
+(require-package 'snakemake-mode)
+
 (require-package 'string-inflection)
 
 ;; .bu Butane files for Fedora CoreOS are YAML
