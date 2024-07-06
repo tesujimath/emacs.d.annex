@@ -76,6 +76,8 @@
           (lambda () (setq tab-width 2
                            indent-tabs-mode nil)))
 
+(require-package 'elvish-mode)
+
 (require-package 'protobuf-mode)
 (add-auto-mode 'protobuf-mode "\\.txtpb\\'")
 
