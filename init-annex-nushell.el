@@ -6,7 +6,7 @@
 
 (require-package 'nushell-mode)
 
-(defun tesujimath/clean-buffer () (interactive)
+(defun tesujimath/clean-nushell-buffer () (interactive)
        "clean nushell markup from current buffer"
        (save-excursion
          ;; remove nushell right prompt
