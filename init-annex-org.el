@@ -64,18 +64,13 @@
   (server-start))
 (require 'org-protocol)
 
-(add-hook 'org-mode-hook
-          '(lambda ()
-             (define-key org-mode-map (kbd "C-c C-h") 'hide-sublevels)
-             (turn-on-flyspell)))
-
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(
    (css . t)
    (js . t)
    (latex . t)
-   ;(mscgen . t)
+                                        ;(mscgen . t)
    (python . t)
    (sass . t)
    (sql . t)
@@ -136,7 +131,16 @@
                                                        (interactive "")
                                                        (outline-hide-sublevels 9)
                                                        ))
+             (define-key org-mode-map (kbd "C-c C-h") 'hide-sublevels)
+             (define-key org-mode-map (kbd "`") 'tesujimath/org-insert-tilde)
+             (turn-on-flyspell)
              ))
+
+(defun tesujimath/org-insert-tilde ()
+  "Insert a tilde using `org-self-insert-command'."
+  (interactive)
+  (setq last-command-event ?~)
+  (call-interactively #'org-self-insert-command))
 
 (provide 'init-annex-org)
 ;;; init-annex-org.el ends here
