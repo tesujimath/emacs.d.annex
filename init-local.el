@@ -149,6 +149,10 @@
 ;; paredit-everywhere-mode is an acquired taste
 (remove-hook 'prog-mode-hook 'paredit-everywhere-mode)
 
+;; make consult-buffer prefer recent buffers
+(with-eval-after-load 'consult
+  (consult-customize consult-buffer :sort t :group nil))
+
 ;; don't want control-Z to suspend frame, it just hangs Emacs
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
